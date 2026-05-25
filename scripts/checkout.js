@@ -3,6 +3,8 @@ import {products} from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import {deliveryOptions} from "../data/deliveryOptions.js";
+function renderOrderSummary()
+{
 let cartSummaryHtml='';
 cart.forEach((cartItem)=>
 {
@@ -128,5 +130,8 @@ link.addEventListener('click',()=>
     {
         const {productId,deliveryOptionId}=element.dataset
         updateDeliveryOption(productId,deliveryOptionId);
+        renderOrderSummary();
     })
 })
+}
+renderOrderSummary();
