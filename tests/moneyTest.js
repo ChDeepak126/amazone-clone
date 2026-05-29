@@ -1,7 +1,7 @@
 import { formatCurrency } from "../scripts/utils/money.js"; 
 
 console.log("test suite:formatCurrency");
-console.log("works on price in cents");
+console.log("converts cents into dollers");
 if(formatCurrency(2005)==='20.05')
     console.log("passed");
 else
