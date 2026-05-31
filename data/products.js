@@ -34,10 +34,28 @@
   {
     return `$${formatCurrency(this.priceCents)}`;
   }
+  extraInfoHtml()
+  {
+    return '';
+  }
 }
+
+class Cloths extends Products
+{ 
+  constructor(productDetails)
+  {
+    super(productDetails);
+    this.sizeChartLink=productDetails.sizeChartLink;
+  }
+  extraInfoHtml()
+  {
+    return `<a href="${this.sizeChartLink}" target="_blank">Size Chart</a>`;
+  }
+}
+
  
  export const products = [
-  new Products({
+  {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
     name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
@@ -51,7 +69,7 @@
       "sports",
       "apparel"
     ]
-  }),
+  },
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
     image: "images/products/intermediate-composite-basketball.jpg",
@@ -697,5 +715,7 @@
   }
 ].map((productDetails)=>
 {
-  return new Products(productDetails)
+  if(productDetails.type==='clothing')
+    return new Cloths(productDetails);
+  return new Products(productDetails);
 });
