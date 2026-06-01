@@ -58,6 +58,32 @@ console.log(date);
 console.log(date.toLocaleTimeString());
 */
 export let products=[];
+
+
+export function loadProductsFetch()
+{
+  const promise=fetch('https://supersimplebackend.dev/products')
+  .then((response)=>
+  {
+     return response.json();
+  })
+  .then((productsDetails)=>
+  {
+     products=productsDetails.map((productDetails)=>
+        {
+          if(productDetails.type==='clothing')
+            return new Cloths(productDetails);
+          return new Products(productDetails);
+        });
+  });
+  return promise;
+}
+loadProductsFetch().then(()=>
+{
+  console.log('next-step');
+})
+
+
 export function loadProducts(fun)
 {
     const xhr=new XMLHttpRequest();
