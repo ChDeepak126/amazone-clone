@@ -80,7 +80,7 @@ export function loadProductsFetch()
 }
 loadProductsFetch().then(()=>
 {
-  console.log('next-step');
+  console.log('loaded products');
 })
 
 
