@@ -70,7 +70,7 @@ export function loadProducts(fun)
           return new Products(productDetails);
         });
         fun();
-        console.log('loaded');
+        console.log('loaded products');
     });
     xhr.open('GET','https://supersimplebackend.dev/products');
     xhr.send();
