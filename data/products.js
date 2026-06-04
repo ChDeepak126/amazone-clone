@@ -52,6 +52,18 @@ class Cloths extends Products
     return `<a href="${this.sizeChartLink}" target="_blank">Size Chart</a>`;
   }
 }
+export function addedIconHtml(productId)
+{
+  const addedMessage = document.querySelector(
+    `.js-added[data-product-id="${productId}"]`
+  );
+
+  addedMessage.style.opacity = '1';
+
+  setTimeout(() => {
+    addedMessage.style.opacity = '0';
+  }, 1000);
+}
 /*
 const date=new Date();
 console.log(date);

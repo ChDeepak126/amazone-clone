@@ -81,3 +81,8 @@ export function loadCart(fun)
     xhr.open('GET','https://supersimplebackend.dev/cart');
     xhr.send();
 }
+export function clearCart()
+{
+  cart=[];
+  saveLocalStorage();
+}

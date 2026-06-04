@@ -1,5 +1,5 @@
 import {cart,addToCart} from "../data/cart.js";
-import {products,loadProducts} from "../data/products.js";
+import {products,loadProducts,addedIconHtml} from "../data/products.js";
 import {formatCurrency}from "./utils/money.js";
 
 loadProducts(renderProductsGrid);
@@ -51,7 +51,7 @@ function renderProductsGrid()
               ${product.extraInfoHtml()}
               <div class="product-spacer"></div>
 
-              <div class="added-to-cart">
+              <div class="added-to-cart js-added" data-product-id='${product.id}'>
                 <img src="images/icons/checkmark.png">
                 Added
               </div>
@@ -77,7 +77,9 @@ function renderProductsGrid()
         {
             button.addEventListener('click',()=>
             {
+              
               const productId=button.dataset.productId;
+              addedIconHtml(productId);
               addToCart(productId);
               updateCart();
             });

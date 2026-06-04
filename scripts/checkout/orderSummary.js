@@ -6,11 +6,25 @@ import {deliveryOptions,getDeliveryOptions} from "../../data/deliveryOptions.js"
 import { renderPaymentSummary } from "./paymentSummary.js";
 export function renderOrderSummary()
 {
+    function updateCart()
+    {
+    let cartQuantity=0;
+    cart.forEach((item)=>
+    {
+    cartQuantity+=item.quantity;
+    })
+    const checkoutCount=document.querySelector('.js-checkout-count');
+    if(checkoutCount)
+    {
+        checkoutCount.innerHTML=`${cartQuantity} items`;
+    }
+    }
+updateCart();
 let cartSummaryHtml='';
 cart.forEach((cartItem)=>
 {
     const productId=cartItem.productId;
-    const  matchingItem=getProduct(productId)
+    const  matchingItem=getProduct(productId);
     const deliveryOptionId=cartItem.deliveryOptionId
     const deliveryOption=getDeliveryOptions(deliveryOptionId);
     const today=dayjs();
