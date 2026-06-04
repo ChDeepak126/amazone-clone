@@ -62,7 +62,27 @@ Testing concepts covered:
 
 ## Demo
 
-Screen recording available in the repository assets and LinkedIn project post.
+A screen recording of the project is available in my LinkedIn project post.
+
+## Screenshots
+
+### Home Page
+
+![Home Page](images/screenshots/01-home-page.png)
+
+### Checkout Page
+
+![Checkout Page](images/screenshots/02-checkout-page.png)
+
+### Orders Page
+
+![Orders Page](images/screenshots/03-orders-page.png)
+
+### Tracking Page
+
+![Tracking Page](images/screenshots/04-tracking-page.png)
+
+## Future Improvements
 
 ## Future Improvements
 
