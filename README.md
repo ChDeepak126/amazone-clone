@@ -62,7 +62,9 @@ Testing concepts covered:
 
 ## Demo
 
-A screen recording of the project is available in my LinkedIn project post.
+A complete walkthrough of the project, including product browsing, cart management, checkout flow, order history, tracking functionality, and Jasmine test execution.
+
+[Watch the Demo Video on LinkedIn](https://www.linkedin.com/posts/chillarigedeepak_javascript-frontenddevelopment-webdevelopment-ugcPost-7468181890299260928-WOIo/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFc16HsBFFTsuEMEv2MGcSf-AsoCybDkQjU)
 
 ## Screenshots
 
@@ -81,8 +83,6 @@ A screen recording of the project is available in my LinkedIn project post.
 ### Tracking Page
 
 ![Tracking Page](images/screenshots/04-tracking-page.png)
-
-## Future Improvements
 
 ## Future Improvements
 
